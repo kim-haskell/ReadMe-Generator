@@ -1,6 +1,6 @@
 function renderBadge (license) {
     if (license !== "None") {
-        return `![GitHub license](https://img.shields.io/badge/license-${license}-blue.svg)`
+        return `![GitHub license] (https://img.shields.io/badge/license-${license}-blue.svg)`
     }
     return "";
 }
@@ -20,22 +20,34 @@ function renderSection (license) {
 }
 
 function generateFile (data) {
-    return `# ${data.title} 
+    return `# ${data.projectName} 
     ${renderBadge(data.license)}
     ## Description
-    ${data.description} 
+    ${data.description}
+    ## Table of Contents
+        *Installation
+        *Usage
+        *License
+        *Contributing
+        *Tests
+        *Questions
+    ## Installation Instructions:
+    ${data.installation}
+    ## Usage:
+    ${data.usage}
+    ## Contribution Guidelines:
+    ${data.contribution}
     ## Test
     To run the test, run the following command:
     ${data.test} 
     ## Questions
-    If you have any questions about the repo, to report any issue, or you would like to collaborate, contact me 
+    If you have any questions about the repo, to report any issue, or you would like to collaborate, contact me at:
     ${data.email}
     
-    You can find more of my work at 
+    You can find more of my work at: 
     ${data.gitHubUserName}`
 }
 
 module.exports = generateFile
 
 
-//In between description and test add a table of content - installation, usage, contributing

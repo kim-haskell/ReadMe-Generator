@@ -18,12 +18,32 @@ const questions = [
     {
         type: "input",
         name: "projectName",
-        message: "What is project name?"   
+        message: "What is the project name?"   
     },
     {
         type: "input",
         name: "description",
         message: "What is the project description?"   
+    },
+    {
+        type: "input",
+        name: "installation",
+        message: "What are the installation instructions?"   
+    },
+    {
+        type: "input",
+        name: "usage",
+        message: "What are the usage instructions?"   
+    },
+    {
+        type: "input",
+        name: "contribution",
+        message: "What are the contribution guidelines?"   
+    },
+    {
+        type: "input",
+        name: "test",
+        message: "What are the code and technologies used?"   
     },
     {
         type: "list",
